@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스튜디오 문의 | 탑플렉스스튜디오</title>
+<meta name="description" content="탑플렉스 스튜디오 예약·문의. 경기도 수원시 영통구 법조로 25 SK뷰레이크. 전화 010-2045-8209, 카카오톡 오픈채팅으로 편하게 문의하세요.">
+<meta name="theme-color" content="#ff7a00">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="mark">TF</span><span class="name">탑플렉스<b>스튜디오</b></span></a>
+    <nav class="nav">
+      <a href="index.html">홈</a>
+      <a href="introduce.html">스튜디오소개</a>
+      <a href="studio-board.html">전자칠판 스튜디오</a>
+      <a href="studio-chromakey.html">크로마키스튜디오</a>
+      <a href="studio-horizon.html">호리존스튜디오</a>
+      <a href="studio-live.html">라이브커머스</a>
+      <a href="ai-video.html">AI 영상제작</a>
+      <a href="pricing.html">비용 안내</a>
+      <a class="cta active" href="contact.html">스튜디오 문의</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <a href="index.html">홈</a>
+  <a href="introduce.html">스튜디오소개</a>
+  <a href="studio-board.html">전자칠판 스튜디오</a>
+  <a href="studio-chromakey.html">크로마키스튜디오</a>
+  <a href="studio-horizon.html">호리존스튜디오</a>
+  <a href="studio-live.html">라이브커머스</a>
+  <a href="ai-video.html">AI 영상제작</a>
+  <a href="pricing.html">비용 안내</a>
+  <a class="cta active" href="contact.html">스튜디오 문의</a>
+</div>
+
+<section class="page-hero" style="--hero-bg:url('https://cdn.imweb.me/thumbnail/20260412/d6269c7353c21.png')">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">홈</a><span class="sep">›</span>스튜디오 문의</div>
+    <h1><span class="accent">스튜디오</span> 문의</h1>
+    <p>촬영 예약과 견적 문의를 환영합니다. 카카오톡·전화·아래 문의 양식 중 편한 방법으로 연락 주세요.</p>
+    <div class="tags"><span>광교중앙역 인근</span><span>SK뷰레이크</span><span>주차 가능</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="contact-grid">
+      <!-- left: info + map -->
+      <div class="reveal">
+        <span class="eyebrow">CONTACT</span>
+        <h2 class="sec-title" style="font-size:clamp(24px,3.5vw,34px)">찾아오시는 길</h2>
+        <div class="info-list">
+          <div class="info-row"><div class="label">주소</div><div class="val">경기도 수원시 영통구 법조로 25<br>SK뷰레이크 오피스 A동 1716호 · 3516호</div></div>
+          <div class="info-row"><div class="label">전화</div><div class="val"><a href="tel:010-2045-8209">010-2045-8209</a></div></div>
+          <div class="info-row"><div class="label">이메일</div><div class="val"><a href="mailto:topflex00@naver.com">topflex00@naver.com</a></div></div>
+          <div class="info-row"><div class="label">카카오톡</div><div class="val"><a href="https://open.kakao.com/o/sRELD1pd" target="_blank" rel="noopener">오픈채팅 바로가기 →</a></div></div>
+          <div class="info-row"><div class="label">교통</div><div class="val">신분당선 광교중앙역 인근 · 건물 주차장 이용 가능</div></div>
+        </div>
+        <div class="map-card" style="margin-top:24px">
+          <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%98%81%ED%86%B5%EA%B5%AC%20%EB%B2%95%EC%A1%B0%EB%A1%9C%2025%20SK%EB%B7%B0%EB%A0%88%EC%9D%B4%ED%81%AC&z=16&output=embed" title="탑플렉스 스튜디오 위치" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- right: form -->
+      <div class="reveal">
+        <form class="form" id="inquiryForm">
+          <h3>온라인 문의하기</h3>
+          <p class="sub">아래 내용을 작성하시면 메일 앱으로 문의가 연결됩니다. 빠른 상담은 카카오톡을 이용해 주세요.</p>
+          <div class="form-row">
+            <div class="field"><label for="f-name">성함</label><input id="f-name" type="text" placeholder="홍길동" required></div>
+            <div class="field"><label for="f-phone">연락처</label><input id="f-phone" type="tel" placeholder="010-0000-0000" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-type">문의 스튜디오</label>
+              <select id="f-type">
+                <option value="전자칠판 스튜디오">전자칠판 스튜디오</option>
+                <option value="크로마키 스튜디오">크로마키 스튜디오</option>
+                <option value="호리존 스튜디오">호리존 스튜디오</option>
+                <option value="라이브커머스">라이브커머스</option>
+                <option value="AI 영상제작·편집">AI 영상제작 · 편집</option>
+                <option value="기타 문의">기타 문의</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-date">희망 일정</label><input id="f-date" type="text" placeholder="예) 12월 중순 평일 오후"></div>
+          </div>
+          <div class="field"><label for="f-msg">문의 내용</label><textarea id="f-msg" placeholder="촬영 목적, 인원, 필요 장비, 편집 여부 등을 적어주세요."></textarea></div>
+          <button type="submit" class="btn btn-primary">문의 보내기 →</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kakao-bar reveal">
+      <div>
+        <div class="t">가장 빠른 상담은 카카오톡</div>
+        <div class="s">오픈채팅으로 실시간 예약·견적 상담을 받아보세요.</div>
+      </div>
+      <a class="btn btn-kakao" href="https://open.kakao.com/o/sRELD1pd" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#3c1e1e"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.6.5.4.3-.1 2.6-1.8 3.6-2.5.7.1 1.4.2 2.1.2 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
+        카카오톡 오픈채팅
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="name">탑플렉스<b>스튜디오</b></div>
+        <p>강의촬영 · 스튜디오 대관 · 라이브커머스. 수원 광교의 방송 전문 스튜디오 탑플렉스입니다.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/channel/UCxJ5r7ACqm0tjd18kC4_7fA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.8-.5-5.6c-.3-1-1-1.8-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.4c-1 .3-1.8 1-2 2C1 8.2 1 12 1 12s0 3.8.5 5.6c.3 1 1 1.8 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.4c1-.3 1.8-1 2-2C23 15.8 23 12 23 12zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+          <a href="https://open.kakao.com/o/sRELD1pd" target="_blank" rel="noopener" aria-label="KakaoTalk"><svg viewBox="0 0 24 24"><path d="M12 4C7 4 3 7.1 3 11c0 2.5 1.7 4.7 4.2 6-.2.6-.6 2.3-.7 2.6-.1.4.2.4.3.3.2-.1 2.4-1.6 3.3-2.2.6.1 1.2.1 1.6.1 5 0 9-3.1 9-7s-4-7-9-7z"/></svg></a>
+        </div>
+      </div>
+      <nav class="foot-nav">
+        <a href="index.html">홈</a><a href="introduce.html">스튜디오소개</a><a href="studio-board.html">전자칠판 스튜디오</a><a href="studio-chromakey.html">크로마키스튜디오</a><a href="studio-horizon.html">호리존스튜디오</a><a href="studio-live.html">라이브커머스</a><a href="ai-video.html">AI 영상제작</a><a href="pricing.html">비용 안내</a><a href="contact.html">스튜디오 문의</a>
+      </nav>
+    </div>
+    <div class="foot-biz">
+      주식회사 탑플렉스<span class="sep">|</span>대표 현형진<span class="sep">|</span>경기도 수원시 영통구 법조로 25 SK뷰레이크 A동 1716호·3516호<br>
+      사업자 등록번호 : 112-86-02208<span class="sep">|</span>전화 : <a href="tel:010-2045-8209" style="color:inherit">010-2045-8209</a><span class="sep">|</span>이메일 : <a href="mailto:topflex00@naver.com" style="color:inherit">topflex00@naver.com</a>
+    </div>
+    <div class="copy">© 2026 TopFlex Studio. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="float-kakao" href="https://open.kakao.com/o/sRELD1pd" target="_blank" rel="noopener" aria-label="카카오톡 문의">
+  <svg viewBox="0 0 24 24" fill="#3c1e1e"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.6.5.4.3-.1 2.6-1.8 3.6-2.5.7.1 1.4.2 2.1.2 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
+</a>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
