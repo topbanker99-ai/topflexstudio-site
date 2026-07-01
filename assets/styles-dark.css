@@ -5,7 +5,8 @@
   --b1:#5b8cff;--b2:#46d6e6;            /* brand (logo, 문의 button) */
   --a1:#5b8cff;--a2:#46d6e6;            /* page accent (override per page) */
 }
-body{font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6}
+html{overflow-x:hidden}
+body{font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
 img{max-width:100%}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 .gt{background:linear-gradient(120deg,var(--b1),var(--b2));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -173,7 +174,11 @@ footer .sep{margin:0 8px;opacity:.4}
  .hero-photo{order:-1}.why-row .why-photo{order:-1}.sspace-photo{order:-1}
  .fcards{grid-template-columns:1fr 1fr}
  .equip-grid{grid-template-columns:repeat(3,1fr)}
- .nav-in{gap:0}.nav-in a{font-size:12px;padding:5px 6px}
+ .nav-in{gap:4px 5px}.nav-in a{font-size:12px;padding:7px 9px}
+ .hero{padding:46px 0 42px}
+ .chero{padding:54px 0 62px}
+ .getsec,.contact-sec{padding:54px 0}
+ .why{padding-top:8px}
  .hdr-top{padding:14px 18px}.wrap{padding:0 18px}
  .car-btn.prev{left:8px}.car-btn.next{right:8px}
 }
