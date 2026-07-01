@@ -426,3 +426,20 @@ footer .sep{margin:0 8px;opacity:.4}
 .ba-handle svg{display:block}
 .ar-hint{text-align:center;color:#9aa1ad;font-size:13.5px;letter-spacing:.4px;margin-top:30px}
 @media(max-width:860px){.ar-grid{grid-template-columns:1fr;gap:28px}.airetouch{padding:44px 0 52px}}
+
+/* ===== AI RETOUCH 다크 변형 (전자칠판·크로마키 등 어두운 페이지용) ===== */
+.airetouch.dark{background:transparent;border-top:none}
+.airetouch.dark .eyb{color:color-mix(in srgb,var(--a1) 78%,#fff)}
+.airetouch.dark .ar-title{color:var(--text)}
+.airetouch.dark .ar-sub{color:var(--muted)}
+.airetouch.dark .ba-card figcaption{color:var(--text)}
+.airetouch.dark .ar-hint{color:var(--muted)}
+.airetouch.dark .ba-slider{border:1px solid var(--line);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+
+/* ===== 영상 그리드 / 센터 히어로 ===== */
+.vgrid{display:grid;gap:22px}
+.vgrid.two{grid-template-columns:1fr 1fr}
+.vgrid.three{grid-template-columns:1fr 1fr 1fr}
+.hero-center{max-width:820px;margin:0 auto;text-align:center}
+.hero-center p{margin-left:auto;margin-right:auto}
+@media(max-width:860px){.vgrid.two,.vgrid.three{grid-template-columns:1fr}}
