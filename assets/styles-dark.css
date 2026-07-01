@@ -406,3 +406,23 @@ footer .sep{margin:0 8px;opacity:.4}
 .bb-card{height:56px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.06)}
 .pnote{color:var(--muted);font-size:13.5px;text-align:center;margin-top:22px}
 @media(max-width:860px){.scards{grid-template-columns:1fr}}
+
+/* ===== AI RETOUCH : 보정 전/후 드래그 슬라이더 (라이트 스포트라이트 섹션) ===== */
+.airetouch{background:#f5f6f9;padding:60px 0 66px;border-top:1px solid rgba(0,0,0,.05)}
+.airetouch .eyb{color:#8790a2;letter-spacing:3px}
+.ar-title{text-align:center;color:#161821;font-size:clamp(25px,3.4vw,38px);font-weight:800;letter-spacing:-1px;line-height:1.22;margin-bottom:14px}
+.ar-sub{text-align:center;color:#6b7280;font-size:15px;max-width:600px;margin:0 auto 40px;line-height:1.65}
+.ar-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.ba-card{margin:0}
+.ba-card figcaption{text-align:center;color:#2b2e36;font-weight:700;font-size:15px;margin-top:16px}
+.ba-slider{position:relative;aspect-ratio:1200/848;border-radius:15px;overflow:hidden;border:1px solid rgba(20,30,55,.08);box-shadow:0 16px 40px rgba(20,30,55,.14);background:#000;touch-action:none;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.ba-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;pointer-events:none;-webkit-user-drag:none}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba-lab{position:absolute;top:14px;z-index:4;font-size:12px;font-weight:700;letter-spacing:.4px;padding:6px 14px;border-radius:999px;color:#fff;pointer-events:none}
+.ba-lab.before{left:14px;background:rgba(64,69,80,.92)}
+.ba-lab.after{right:14px;background:#2f6bff}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;transform:translateX(-1.5px);z-index:5;pointer-events:none;box-shadow:0 0 6px rgba(0,0,0,.28)}
+.ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 3px 12px rgba(20,30,55,.32);border:1px solid rgba(0,0,0,.05)}
+.ba-handle svg{display:block}
+.ar-hint{text-align:center;color:#9aa1ad;font-size:13.5px;letter-spacing:.4px;margin-top:30px}
+@media(max-width:860px){.ar-grid{grid-template-columns:1fr;gap:28px}.airetouch{padding:44px 0 52px}}
