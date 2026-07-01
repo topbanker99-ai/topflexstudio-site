@@ -21,7 +21,7 @@ img{max-width:100%}
 .btn-sm{background:linear-gradient(120deg,#5b7cfa,#8e6cf6);color:#fff;font-weight:700;font-size:13.5px;padding:9px 18px;border-radius:999px;text-decoration:none}
 .nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;gap:4px;justify-content:center;max-width:1180px;margin:0 auto;padding:13px 28px;flex-wrap:wrap}
-.nav-in a{color:#d7dae1;font-size:14px;font-weight:600;text-decoration:none;padding:6px 11px;letter-spacing:-.3px;transition:color .15s}
+.nav-in a{color:#d7dae1;font-size:16px;font-weight:600;text-decoration:none;padding:8px 8px;letter-spacing:-.3px;transition:color .15s}
 .nav-in a:hover,.nav-in a.on{color:#fff}
 
 /* section heads */
@@ -174,8 +174,10 @@ footer .sep{margin:0 8px;opacity:.4}
  .hero-photo{order:-1}.why-row .why-photo{order:-1}.sspace-photo{order:-1}
  .fcards{grid-template-columns:1fr 1fr}
  .equip-grid{grid-template-columns:repeat(3,1fr)}
- .nav-in{gap:4px 5px}.nav-in a{font-size:12px;padding:7px 9px}
- .hero{padding:46px 0 42px}
+ .nav-in{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:480px;padding:13px 18px}
+ .nav-in a{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 8px;font-size:15px;line-height:1.25;text-align:center;color:#d7dae1}
+ .nav-in a.on{background:rgba(91,140,255,.15);border-color:var(--b1);color:#fff}
+ .hero{padding:30px 0 42px}
  .chero{padding:54px 0 62px}
  .getsec,.contact-sec{padding:54px 0}
  .why{padding-top:8px}
@@ -458,3 +460,15 @@ a.cmethod{display:block;text-decoration:none;color:var(--text);transition:border
 a.cmethod:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transform:translateY(-3px)}
 a.cchip{text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
 a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transform:translateY(-2px)}
+
+/* ===== FAQ (홈) — AI 검색 / 구조화 데이터 ===== */
+.faqsec{padding:64px 0;border-top:1px solid var(--line)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:18px 54px 18px 22px;font-weight:700;font-size:16px;list-style:none;position:relative;color:var(--text)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:24px;font-weight:400;line-height:1}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item[open] summary{color:#6ba5ff}
+.faq-a{padding:0 22px 20px;color:var(--muted);line-height:1.75}
+@media(max-width:860px){.faqsec{padding:48px 0}.faq-item summary{font-size:15px;padding:16px 46px 16px 18px}.faq-a{padding:0 18px 18px}}
