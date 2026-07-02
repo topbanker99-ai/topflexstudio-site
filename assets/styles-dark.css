@@ -472,3 +472,48 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .faq-item[open] summary{color:#6ba5ff}
 .faq-a{padding:0 22px 20px;color:var(--muted);line-height:1.75}
 @media(max-width:860px){.faqsec{padding:48px 0}.faq-item summary{font-size:15px;padding:16px 46px 16px 18px}.faq-a{padding:0 18px 18px}}
+
+/* ===== 3D 이모지 아이콘 (테두리 없는 PNG 스타일, 확대) ===== */
+.e3d{height:1.55em;width:auto;vertical-align:-.32em;display:inline-block}
+.fi{background:none;border:none;width:48px;height:48px}
+.fi .e3d{height:44px;vertical-align:middle}
+.frow .i{background:none;width:42px;height:42px}
+.frow .i .e3d{height:36px;vertical-align:middle}
+.chip .e3d{height:23px;vertical-align:-6px}
+.ei .e3d{height:68px;vertical-align:middle}
+/* ===== 투명 3D 로고 + 렌즈 글로우 ===== */
+.logo3d{position:relative;width:min(400px,88%);margin:0 0 18px;line-height:0}
+.logo3d img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 34px rgba(50,110,255,.22))}
+.logo3d .lg{position:absolute;aspect-ratio:1;border-radius:50%;pointer-events:none;
+  transform:translate(-50%,-50%);mix-blend-mode:screen;
+  background:radial-gradient(circle,rgba(160,220,255,.95) 0%,rgba(80,160,255,.4) 42%,transparent 68%);
+  animation:lensPulse 3s ease-in-out infinite}
+.logo3d .lg1{width:15%;left:38.4%;top:42%}
+.logo3d .lg2{width:8%;left:96%;top:72.5%;animation-delay:1.5s}
+@keyframes lensPulse{0%,100%{opacity:.12}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.logo3d .lg{animation:none;opacity:.5}}
+
+/* ===== 드롭다운 내비게이션 ===== */
+.nav-in a,.ndbtn{font-size:18.5px;padding:9px 14px}
+.ndrop{position:relative}
+.ndbtn{display:inline-flex;align-items:center;gap:7px;background:none;border:none;cursor:pointer;
+  color:#d7dae1;font-weight:600;letter-spacing:-.3px;font-family:inherit;transition:color .15s}
+.ndbtn:hover,.ndrop.open .ndbtn{color:#fff}
+.nda{transition:transform .22s;margin-top:1px}
+.ndrop.open .nda{transform:rotate(180deg)}
+.ndmenu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);
+  background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:8px;
+  min-width:200px;display:none;flex-direction:column;gap:2px;z-index:60;
+  box-shadow:0 16px 38px rgba(0,0,0,.5)}
+.ndrop.open .ndmenu{display:flex}
+.ndmenu a{display:block;font-size:16.5px;padding:11px 15px;border-radius:9px;white-space:nowrap;text-align:left}
+.ndmenu a:hover{background:rgba(91,140,255,.13);color:#fff}
+@media(max-width:860px){
+  .nav-in a,.ndbtn{font-size:16px}
+  .ndrop{grid-column:1/-1;display:grid;gap:8px}
+  .ndbtn{justify-content:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 8px}
+  .ndrop.open .ndbtn{border-color:var(--b1);color:#fff}
+  .ndmenu{position:static;transform:none;display:none;box-shadow:none;background:none;border:none;padding:0;min-width:0}
+  .ndrop.open .ndmenu{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .ndmenu a{background:var(--panel);border:1px solid var(--line);border-radius:12px;text-align:center;white-space:normal;font-size:15px;padding:13px 8px}
+}
