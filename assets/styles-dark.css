@@ -517,3 +517,24 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
   .ndrop.open .ndmenu{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .ndmenu a{background:var(--panel);border:1px solid var(--line);border-radius:12px;text-align:center;white-space:normal;font-size:15px;padding:13px 8px}
 }
+
+/* ===== 내비 문의 버튼 ===== */
+.ncta{background:linear-gradient(135deg,var(--b1),var(--b2));color:#fff!important;border-radius:99px;
+  padding:9px 18px!important;font-weight:700;margin-left:6px}
+.ncta:hover{filter:brightness(1.1)}
+@media(max-width:860px){.ncta{grid-column:1/-1;border-radius:12px;margin-left:0;text-align:center}}
+/* ===== 톡상담 플로팅 버튼 ===== */
+.talk-fab{position:fixed;right:18px;bottom:22px;z-index:999;display:block;line-height:0;
+  filter:drop-shadow(0 6px 16px rgba(0,0,0,.45));transition:transform .15s}
+.talk-fab:hover{transform:scale(1.06)}
+.talk-fab img{height:46px;width:auto}
+@media(max-width:860px){.talk-fab img{height:42px}.talk-fab{right:14px;bottom:16px}}
+/* ===== 로고 스우시 라이트 스윕 (페이지 로드 시 1회) ===== */
+.logo3d .sweep{position:absolute;inset:0;pointer-events:none;
+  -webkit-mask:url("img/logo-swoosh-mask.png") center/100% 100% no-repeat;
+  mask:url("img/logo-swoosh-mask.png") center/100% 100% no-repeat;
+  background:linear-gradient(105deg,transparent 38%,rgba(190,225,255,.55) 47%,rgba(255,255,255,.98) 50%,rgba(190,225,255,.55) 53%,transparent 62%);
+  background-size:280% 100%;background-position:160% 0;background-repeat:no-repeat;
+  animation:swooshSweep 1.6s ease-in-out .5s 1 forwards;mix-blend-mode:screen}
+@keyframes swooshSweep{from{background-position:160% 0}to{background-position:-160% 0}}
+@media (prefers-reduced-motion:reduce){.logo3d .sweep{animation:none;opacity:0}}
