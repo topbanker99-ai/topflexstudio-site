@@ -475,8 +475,8 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 
 /* ===== 3D 이모지 아이콘 (테두리 없는 PNG 스타일, 확대) ===== */
 .e3d{height:1.55em;width:auto;vertical-align:-.32em;display:inline-block}
-.fi{background:none;border:none;width:48px;height:48px}
-.fi .e3d{height:44px;vertical-align:middle}
+.feat .fi{background:none;border:none;border-radius:0;width:48px;height:48px}
+.feat .fi .e3d{height:44px;vertical-align:middle}
 .frow .i{background:none;width:42px;height:42px}
 .frow .i .e3d{height:36px;vertical-align:middle}
 .chip .e3d{height:23px;vertical-align:-6px}
