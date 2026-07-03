@@ -509,13 +509,14 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .ndmenu a{display:block;font-size:16.5px;padding:11px 15px;border-radius:9px;white-space:nowrap;text-align:left}
 .ndmenu a:hover{background:rgba(91,140,255,.13);color:#fff}
 @media(max-width:860px){
+  .nav-in{grid-auto-flow:dense}
   .nav-in a,.ndbtn{font-size:16px}
-  .ndrop{grid-column:1/-1;display:grid;gap:8px}
-  .ndbtn{justify-content:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 8px}
+  .ndrop{display:contents}
+  .ndbtn{width:100%;justify-content:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 8px}
   .ndrop.open .ndbtn{border-color:var(--b1);color:#fff}
-  .ndmenu{position:static;transform:none;display:none;box-shadow:none;background:none;border:none;padding:0;min-width:0}
-  .ndrop.open .ndmenu{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .ndmenu a{background:var(--panel);border:1px solid var(--line);border-radius:12px;text-align:center;white-space:normal;font-size:15px;padding:13px 8px}
+  .ndmenu{grid-column:1/-1;position:static;transform:none;display:none;box-shadow:none;border:none;padding:7px;min-width:0;background:rgba(91,140,255,.06);border-radius:12px}
+  .ndrop.open .ndmenu{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .ndmenu a{background:var(--panel2,#1a1d27);border:1px solid var(--line);border-radius:10px;text-align:center;white-space:normal;font-size:14.5px;padding:11px 6px}
 }
 
 /* ===== 내비 문의 버튼 ===== */
@@ -538,3 +539,15 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
   animation:swooshSweep 1.6s ease-in-out .5s 1 forwards;mix-blend-mode:screen}
 @keyframes swooshSweep{from{background-position:160% 0}to{background-position:-160% 0}}
 @media (prefers-reduced-motion:reduce){.logo3d .sweep{animation:none;opacity:0}}
+
+/* ===== 서브페이지 3D 아이콘 (박스 제거·크기) ===== */
+.fcard .fci,.scard .sci,.srow .si,.smini .si,.info-card .ii,.plat .pi,.cmethod .cmi,.pblock-head .phi{background:none;border:none;border-radius:0}
+.fcard .fci .e3d,.scard .sci .e3d{height:54px;vertical-align:middle}
+.srow .si .e3d{height:38px;vertical-align:middle}
+.smini .si .e3d{height:48px;vertical-align:middle}
+.info-card .ii .e3d{height:40px;vertical-align:middle}
+.plat .pi .e3d{height:46px;vertical-align:middle}
+.cmethod .cmi .e3d{height:52px;vertical-align:middle}
+.pblock-head .phi .e3d{height:44px;vertical-align:middle}
+.ecard .eci .e3d{height:58px;vertical-align:middle}
+.dir-card .dci .e3d{height:46px;vertical-align:middle}
