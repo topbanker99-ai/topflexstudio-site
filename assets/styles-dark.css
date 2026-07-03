@@ -484,14 +484,14 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 /* ===== 투명 3D 로고 + 렌즈 글로우 ===== */
 .logo3d{position:relative;width:min(400px,88%);margin:0 0 18px;line-height:0}
 .logo3d img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 34px rgba(50,110,255,.22))}
-.logo3d .lg{position:absolute;aspect-ratio:1;border-radius:50%;pointer-events:none;
+.logo3d .lg,.hlogo .lg{position:absolute;aspect-ratio:1;border-radius:50%;pointer-events:none;
   transform:translate(-50%,-50%);mix-blend-mode:screen;
   background:radial-gradient(circle,rgba(160,220,255,.95) 0%,rgba(80,160,255,.4) 42%,transparent 68%);
   animation:lensPulse 3s ease-in-out infinite}
-.logo3d .lg1{width:15%;left:38.4%;top:42%}
-.logo3d .lg2{width:8%;left:96%;top:72.5%;animation-delay:1.5s}
+.logo3d .lg1,.hlogo .lg1{width:15%;left:38.4%;top:42%}
+.logo3d .lg2,.hlogo .lg2{width:8%;left:96%;top:72.5%;animation-delay:1.5s}
 @keyframes lensPulse{0%,100%{opacity:.12}50%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.logo3d .lg{animation:none;opacity:.5}}
+@media (prefers-reduced-motion:reduce){.logo3d .lg,.hlogo .lg{animation:none;opacity:.5}}
 
 /* ===== 드롭다운 내비게이션 ===== */
 .nav-in a,.ndbtn{font-size:18.5px;padding:9px 14px}
@@ -531,14 +531,14 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .talk-fab img{height:46px;width:auto}
 @media(max-width:860px){.talk-fab img{height:42px}.talk-fab{right:14px;bottom:16px}}
 /* ===== 로고 스우시 라이트 스윕 (페이지 로드 시 1회) ===== */
-.logo3d .sweep{position:absolute;inset:0;pointer-events:none;
+.logo3d .sweep,.hlogo .sweep{position:absolute;inset:0;pointer-events:none;
   -webkit-mask:url("img/logo-swoosh-mask.png") center/100% 100% no-repeat;
   mask:url("img/logo-swoosh-mask.png") center/100% 100% no-repeat;
   background:linear-gradient(105deg,transparent 38%,rgba(190,225,255,.55) 47%,rgba(255,255,255,.98) 50%,rgba(190,225,255,.55) 53%,transparent 62%);
   background-size:280% 100%;background-position:160% 0;background-repeat:no-repeat;
-  animation:swooshSweep 1.6s ease-in-out .5s 1 forwards;mix-blend-mode:screen}
+  animation:swooshSweep 4.8s ease-in-out .5s 1 forwards;mix-blend-mode:screen}
 @keyframes swooshSweep{from{background-position:160% 0}to{background-position:-160% 0}}
-@media (prefers-reduced-motion:reduce){.logo3d .sweep{animation:none;opacity:0}}
+@media (prefers-reduced-motion:reduce){.logo3d .sweep,.hlogo .sweep{animation:none;opacity:0}}
 
 /* ===== 서브페이지 3D 아이콘 (박스 제거·크기) ===== */
 .fcard .fci,.scard .sci,.srow .si,.smini .si,.info-card .ii,.plat .pi,.cmethod .cmi,.pblock-head .phi{background:none;border:none;border-radius:0}
@@ -551,3 +551,9 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .pblock-head .phi .e3d{height:44px;vertical-align:middle}
 .ecard .eci .e3d{height:58px;vertical-align:middle}
 .dir-card .dci .e3d{height:46px;vertical-align:middle}
+
+/* ===== 시안2: 헤더 바 (로고 + 문의) ===== */
+.hdr-top2{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:10px 28px 6px}
+.hlogo{position:relative;display:block;width:170px;line-height:0}
+.hlogo img{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 18px rgba(50,110,255,.2))}
+@media(max-width:860px){.hdr-top2{padding:8px 14px 4px}.hlogo{width:132px}.btn-sm{font-size:13px;padding:8px 14px}}
