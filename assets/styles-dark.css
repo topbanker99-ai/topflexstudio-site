@@ -594,3 +594,14 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 /* ===== 포트폴리오 유튜브 ===== */
 .yt-main{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;max-width:960px}
 .yt-main iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* 구축사례 스크린샷 카드 */
+.pfframe.shot{height:auto!important}
+.pfframe.shot img{width:100%;height:auto;display:block}
+
+/* ===== 포트폴리오 4x4 그리드 ===== */
+.yt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1024px){.yt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.yt-grid{grid-template-columns:1fr}}
+.ytc{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+.ytc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
