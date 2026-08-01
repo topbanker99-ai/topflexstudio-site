@@ -658,7 +658,7 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 @media(max-width:860px){.v-duo{grid-template-columns:1fr;gap:16px}}
 /* ===== 홈 카톡 마퀴 축소판 ===== */
 .home-mq{margin:26px 0 6px;padding:8px 0}
-.home-mq .rv-track img{height:220px}
-@media(max-width:860px){.home-mq .rv-track img{height:170px}}
+.home-mq .rv-track img{height:560px}
+@media(max-width:860px){.home-mq .rv-track img{height:400px}}
 .mq-cta{display:inline-block;font-size:14px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--b1),var(--b2));border-radius:99px;padding:9px 18px;text-decoration:none}
 .mq-cta:hover{filter:brightness(1.1)}
