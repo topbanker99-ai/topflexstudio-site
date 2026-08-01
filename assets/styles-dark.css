@@ -606,11 +606,11 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .rv-lead{color:var(--muted);font-size:15.5px;margin:10px 0 22px;max-width:680px}
 .rv-marquee-wrap{padding:8px 0 4px;overflow:hidden}
 .rv-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.rv-track{display:flex;gap:14px;width:max-content;animation:rvScroll 90s linear infinite;padding:6px 0}
+.rv-track{display:flex;gap:20px;width:max-content;animation:rvScroll 270s linear infinite;padding:6px 0}
 .rv-marquee-wrap:hover .rv-track{animation-play-state:paused}
-.rv-track img{height:280px;width:auto;border-radius:14px;border:1px solid var(--line);display:block;flex-shrink:0}
+.rv-track img{height:560px;width:auto;border-radius:16px;border:1px solid var(--line);display:block;flex-shrink:0}
 @keyframes rvScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:860px){.rv-track img{height:200px}}
+@media(max-width:860px){.rv-track img{height:400px}.rv-track{gap:14px;animation-duration:180s}}
 .rv-stars-line{color:#ffd166;font-size:22px;margin:34px 0 6px;text-align:center;letter-spacing:6px}
 .rv-subtitle{text-align:center;color:var(--muted);font-size:14px;margin:0 0 22px}
 .rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
