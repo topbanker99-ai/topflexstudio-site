@@ -558,11 +558,7 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .hlogo img{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 18px rgba(50,110,255,.2))}
 @media(max-width:860px){.hdr-top2{padding:8px 14px 4px}.hlogo{width:132px}.btn-sm{font-size:13px;padding:8px 14px}}
 
-/* ===== 3D 링크카드 아이콘 & 톡상담 ===== */
-.lcard .ic.icn{background:none}
-.lcard .ic.icn img{width:44px;height:44px;object-fit:contain}
-.talk-fab img{height:58px}
-@media(max-width:860px){.talk-fab img{height:52px}}
+
 /* ===== 사진 갤러리 ===== */
 .pgal-sec{margin:46px auto 8px}
 .pgal-title{font-size:26px;margin:6px 0 18px}
@@ -606,10 +602,41 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
 .ytc{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
 .ytc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-/* 포트폴리오 경량 플레이어 */
-.ytc{cursor:pointer}
-.ytc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
-.ytc:hover img{transform:scale(1.04)}
-.ytp{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:36px;background:rgba(20,20,20,.75);border-radius:10px;pointer-events:none}
-.ytp::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff}
-.ytc:hover .ytp{background:#f00}
+/* ===== 고객후기 페이지 ===== */
+.rv-lead{color:var(--muted);font-size:15.5px;margin:10px 0 22px;max-width:680px}
+.rv-marquee-wrap{padding:8px 0 4px;overflow:hidden}
+.rv-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rv-track{display:flex;gap:14px;width:max-content;animation:rvScroll 90s linear infinite;padding:6px 0}
+.rv-marquee-wrap:hover .rv-track{animation-play-state:paused}
+.rv-track img{height:280px;width:auto;border-radius:14px;border:1px solid var(--line);display:block;flex-shrink:0}
+@keyframes rvScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:860px){.rv-track img{height:200px}}
+.rv-stars-line{color:#ffd166;font-size:22px;margin:34px 0 6px;text-align:center;letter-spacing:6px}
+.rv-subtitle{text-align:center;color:var(--muted);font-size:14px;margin:0 0 22px}
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.rvcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.rvstars{color:#ffd166;font-size:15px;margin-bottom:8px;letter-spacing:2px}
+.rvtxt{font-size:14.5px;line-height:1.65;margin:0 0 12px;color:#d7dae1}
+.rvmeta{font-size:12.5px;color:var(--muted)}
+.rvtag{display:inline-block;background:rgba(91,140,255,.16);color:#c8d6ff;border-radius:6px;padding:2px 8px;font-weight:700;margin-right:2px}
+@media (prefers-reduced-motion:reduce){.rv-track{animation:none}}
+
+/* ===== 우측 하단 플로팅 버튼 (카카오 + 네이버) ===== */
+.fab-stack{position:fixed;right:18px;bottom:20px;z-index:999;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab-btn{display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;border-radius:99px;font-weight:800;font-size:14px;text-decoration:none;color:#111;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:transform .15s,box-shadow .15s}
+.fab-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.fab-kakao{background:#fee500;color:#3c1e1e}
+.fab-naver{background:#03c75a;color:#fff}
+.fab-ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:20px;font-weight:900;line-height:1}
+.fab-ic-naver{background:#fff;color:#03c75a}
+.fab-kakao img{width:36px;height:36px;object-fit:contain;flex-shrink:0}
+.fab-label{font-size:13.5px;letter-spacing:-.3px}
+/* 3D 링크카드 아이콘(홈 카드 유튜브/카카오) 스타일 복구 */
+.lcard .ic.icn{background:none}
+.lcard .ic.icn img{width:44px;height:44px;object-fit:contain}
+@media(max-width:860px){
+  .fab-stack{right:14px;bottom:16px;gap:10px}
+  .fab-btn{padding:9px 14px 9px 10px;font-size:13.5px}
+  .fab-ic,.fab-kakao img{width:32px;height:32px}
+  .fab-ic{font-size:18px}
+}
