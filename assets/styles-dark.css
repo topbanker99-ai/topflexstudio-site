@@ -675,3 +675,8 @@ a.cchip:hover{border-color:color-mix(in srgb,var(--a1) 50%,transparent);transfor
   .hero p.hero-sub{font-size:17px;line-height:1.4;margin-bottom:22px}
   .btn-glass{font-size:15px;padding:13px 24px;border-radius:12px}
 }
+
+
+/* ─── 보정 슬라이더 16:9 단일 카드 (v=1) ─── */
+.ba-slider.ba-16x9{aspect-ratio:16/9}
+.ar-grid.ar-grid-1{grid-template-columns:1fr;max-width:760px;margin:0 auto}
